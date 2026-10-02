@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "review": "Exceptional noise cancellation! Perfectly blocks out ambient office noise and the battery lasts for days.",
+    "rating": 5,
+    "date": "2026-09-15",
+    "productId": "1"
+  },
+  {
+    "id": "2",
+    "review": "Decent sound quality, but the ear cups get a bit warm after wearing them for more than two hours.",
+    "rating": 4.3,
+    "date": "2026-09-20",
+    "productId": "1"
+  },
+  {
+    "id": "3",
+    "review": "The tactile key switches feel amazing to type on. Completely fixed my wrist fatigue during long coding sessions.",
+    "rating": 3.5,
+    "date": "2026-08-11",
+    "productId": "2"
+  },
+  {
+    "id": "4",
+    "review": "Solid build quality, but taking some time to get used to the split ergonomic layout.",
+    "rating": 4,
+    "date": "2026-09-02",
+    "productId": "2"
+  },
+  {
+    "id": "5",
+    "review": "Keeps water ice cold all day even in hot weather. Very durable finish with no leaks.",
+    "rating": 5,
+    "date": "2026-07-28",
+    "productId": "3"
+  },
+  {
+    "id": "6",
+    "review": "Great fitness tracking features, but the sleep tracking data feels slightly inaccurate at times.",
+    "rating": 3.6,
+    "date": "2026-09-18",
+    "productId": "4"
+  },
+  {
+    "id": "7",
+    "review": "Makes a superb morning cup of coffee. Easy to clean and looks beautiful on the countertop.",
+    "rating": 5,
+    "date": "2026-08-30",
+    "productId": "5"
+  },
+  {
+    "id": "8",
+    "review": "High quality leather and sleek design. Comfortably fits my laptop, charger, and daily essentials.",
+    "rating": 5.0,
+    "date": "2026-09-10",
+    "productId": "6"
+  },
+  {
+    "id": "9",
+    "review": "Very soft fabric, but it shrank slightly after the first wash. I recommend ordering one size up.",
+    "rating": 3,
+    "date": "2026-09-22",
+    "productId": "7"
+  },
+  {
+    "id": "10",
+    "review": "Surprisingly loud sound for its compact size. Perfect speaker for outdoor picnics and trips.",
+    "rating": 4,
+    "date": "2026-09-25",
+    "productId": "8"
+  }
+]

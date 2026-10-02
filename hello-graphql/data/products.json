@@ -1,0 +1,152 @@
+[
+  {
+    "id": "1",
+    "name": "Wireless Noise-Canceling Headphones",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+    "description": "Over-ear headphones with active noise cancellation and up to 30 hours of battery life.",
+    "price": 199.99,
+    "quantity": 25,
+    "onStock": true,
+    "categoryId": "1"
+  },
+  {
+    "id": "2",
+    "name": "Ergonomic Mechanical Keyboard",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "description": "RGB backlit mechanical keyboard with tactile switches and split ergonomic layout.",
+    "price": 129.50,
+    "quantity": 14,
+    "onStock": true,
+    "categoryId": "2"
+  },
+  {
+    "id": "3",
+    "name": "Stainless Steel Water Bottle",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "description": "Insulated 32oz water bottle that keeps drinks cold for 24 hours or hot for 12 hours.",
+    "price": 24.99,
+    "quantity": 0,
+    "onStock": false,
+    "categoryId": "3"
+  },
+  {
+    "id": "4",
+    "name": "Smart Fitness Watch",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    "description": "Tracks heart rate, sleep patterns, and daily workouts with integrated GPS.",
+    "price": 149.00,
+    "quantity": 18,
+    "onStock": true,
+    "categoryId": "1"
+  },
+  {
+    "id": "5",
+    "name": "Ceramic Pour-Over Coffee Maker",
+    "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd",
+    "description": "Handcrafted ceramic dripper for brewing smooth, flavorful artisanal coffee.",
+    "price": 34.95,
+    "quantity": 40,
+    "onStock": true,
+    "categoryId": "4"
+  },
+  {
+    "id": "6",
+    "name": "Minimalist Leather Backpack",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "description": "Full-grain leather daypack with a dedicated 15-inch laptop compartment.",
+    "price": 185.00,
+    "quantity": 8,
+    "onStock": true,
+    "categoryId": "5"
+  },
+  {
+    "id": "7",
+    "name": "Organic Cotton Crewneck T-Shirt",
+    "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+    "description": "Soft, breathable classic fit t-shirt made from 100% certified organic cotton.",
+    "price": 28.00,
+    "quantity": 50,
+    "onStock": true,
+    "categoryId": "6"
+  },
+  {
+    "id": "8",
+    "name": "Portable Bluetooth Speaker",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+    "description": "Compact waterproof speaker offering 360-degree sound and deep bass.",
+    "price": 79.99,
+    "quantity": 0,
+    "onStock": false,
+    "categoryId": "1"
+  },
+  {
+    "id": "9",
+    "name": "Electric Desk Riser",
+    "image": "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c",
+    "description": "Adjustable standing desk converter with dual monitor support and motor lift.",
+    "price": 249.99,
+    "quantity": 5,
+    "onStock": true,
+    "categoryId": "7"
+  },
+  {
+    "id": "10",
+    "name": "Non-Slip Yoga Mat",
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f",
+    "description": "6mm extra thick eco-friendly TPE yoga mat with alignment guidelines.",
+    "price": 39.99,
+    "quantity": 30,
+    "onStock": true,
+    "categoryId": "3"
+  },
+  {
+    "id": "11",
+    "name": "Aromatherapy Essential Oil Diffuser",
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108",
+    "description": "Ultrasonic cool mist humidifier featuring 7 ambient LED light colors.",
+    "price": 29.99,
+    "quantity": 22,
+    "onStock": true,
+    "categoryId": "8"
+  },
+  {
+    "id": "12",
+    "name": "Polarized Sunglasses",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+    "description": "Classic wayfarer style sunglasses with UV400 protection and glare reduction.",
+    "price": 45.00,
+    "quantity": 12,
+    "onStock": true,
+    "categoryId": "9"
+  },
+  {
+    "id": "13",
+    "name": "Wireless Charging Pad",
+    "image": "https://images.unsplash.com/photo-1622445268141-84e1b3142965",
+    "description": "15W fast-charging Qi wireless pad compatible with iOS and Android devices.",
+    "price": 19.99,
+    "quantity": 0,
+    "onStock": false,
+    "categoryId": "2"
+  },
+  {
+    "id": "14",
+    "name": "Cast Iron Skillet (10-inch)",
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62",
+    "description": "Pre-seasoned heavy-duty cookware perfect for searing, baking, and frying.",
+    "price": 32.50,
+    "quantity": 15,
+    "onStock": true,
+    "categoryId": "4"
+  },
+  {
+    "id": "15",
+    "name": "Noise-Isolating Earbuds",
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df",
+    "description": "In-ear wired earphones with dynamic drivers, built-in mic, and tangle-free cord.",
+    "price": 15.99,
+    "quantity": 60,
+    "onStock": true,
+    "categoryId": "1"
+  }
+]

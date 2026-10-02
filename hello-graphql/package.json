@@ -1,0 +1,33 @@
+{
+  "name": "graphql-essentials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "compile": "tsc -w",
+    "start": "nodemon ./dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.8.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.8.1",
+  "type": "module",
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "graphql": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "nodemon": "^3.1.14",
+    "typescript": "^7.0.2"
+  }
+}

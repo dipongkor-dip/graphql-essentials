@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "electronics",
+    "title": "Electronics & Gadgets"
+  },
+  {
+    "id": "2",
+    "name": "computers-accessories",
+    "title": "Computers & Accessories"
+  },
+  {
+    "id": "3",
+    "name": "sports-outdoors",
+    "title": "Sports & Outdoors"
+  },
+  {
+    "id": "4",
+    "name": "home-kitchen",
+    "title": "Home & Kitchen"
+  },
+  {
+    "id": "5",
+    "name": "fashion-bags",
+    "title": "Fashion & Bags"
+  },
+  {
+    "id": "6",
+    "name": "apparel",
+    "title": "Apparel & Clothing"
+  },
+  {
+    "id": "7",
+    "name": "office-furniture",
+    "title": "Office & Workspace"
+  },
+  {
+    "id": "8",
+    "name": "home-living",
+    "title": "Home & Living"
+  },
+  {
+    "id": "9",
+    "name": "fashion-accessories",
+    "title": "Fashion Accessories"
+  }
+]
