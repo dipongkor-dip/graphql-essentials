@@ -7,9 +7,12 @@ export const generateToken = (userId: number) => {
 
 export const verifyToken = (token: string) => {
   try {
-    const decoded = jwt.verify(token, config.jwtSecret) as { userId: number };
+    const decoded = jwt.verify(token, config.jwtSecret) as {
+      userId: number;
+    };
     return decoded;
   } catch (error) {
-    throw new Error("Invalid token");
+    console.log("❌ Unauthorized User");
+    return null;
   }
 };
