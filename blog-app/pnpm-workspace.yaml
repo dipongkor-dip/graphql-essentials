@@ -1,0 +1,6 @@
+allowBuilds:
+  '@apollo/protobufjs': true
+  '@prisma/engines': true
+  esbuild: true
+  prisma: true
+  workerd: false
