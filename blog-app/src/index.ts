@@ -29,13 +29,20 @@ const main = async () => {
   const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
     context: async ({ req, res }): Promise<Context> => {
-      const authHeader = req.headers.authorization || "";
-      const token = verifyToken(authHeader);
+      // const authHeader = req.headers.authorization || "";
+      // const token = authHeader ? (verifyToken(authHeader) ?? undefined) : undefined;
 
-      if (!token) {
-        throw new Error("Unauthorized");
-      }
-      return { prisma, userInfo: token };
+      // if (!token) {
+      //   throw new Error("Unauthorized");
+      // }
+      // return token ? { prisma, userInfo: token } : { prisma };
+
+
+      const authHeader = req.headers.authorization;
+      const token = authHeader?.match(/^Bearer\s+(.+)$/i)?.[1];
+      const userInfo = token ? (verifyToken(token) ?? undefined) : undefined;
+
+      return userInfo ? { prisma, userInfo } : { prisma };
     },
   });
 

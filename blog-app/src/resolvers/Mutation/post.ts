@@ -40,7 +40,6 @@ export const postResolvers = {
         data: {
           title,
           content,
-          published: true,
           authorId: user.id, // Use the actual user ID from the token
         },
       });
@@ -68,7 +67,9 @@ export const postResolvers = {
     }
 
     try {
-      const existingPost = await prisma.post.findUnique({ where: { id: postId } });
+      const existingPost = await prisma.post.findUnique({
+        where: { id: postId },
+      });
 
       if (!existingPost) {
         return { userError: "Post not found" };
@@ -80,10 +81,7 @@ export const postResolvers = {
 
       const updatedPost = await prisma.post.update({
         where: { id: postId },
-        data: {
-          title: title ?? existingPost.title,
-          content: content ?? existingPost.content,
-        },
+        data: post,
       });
 
       return { post: updatedPost };
@@ -122,6 +120,40 @@ export const postResolvers = {
       return { post: deletedPost };
     } catch (error) {
       return { userError: "Failed to delete post" };
+    }
+  },
+
+  publishPost: async (
+    p: any,
+    { id }: { id: string },
+    { prisma, userInfo }: PrismaInstance,
+  ) => {
+    if (!userInfo || !userInfo.userId) {
+      return { userError: "❌ Unauthorized User" };
+    }
+
+    try {
+      const postId = Number(id); // Convert id to number
+      const existingPost = await prisma.post.findUnique({
+        where: { id: postId },
+      });
+
+      if (!existingPost) {
+        return { userError: "Post not found" };
+      }
+
+      if (existingPost.authorId !== userInfo.userId) {
+        return { userError: "❌ Unauthorized User" };
+      }
+
+      const publishedPost = await prisma.post.update({
+        where: { id: postId },
+        data: { published: true },
+      });
+
+      return { post: publishedPost };
+    } catch (error) {
+      return { userError: "Failed to publish post" };
     }
   },
 };

@@ -4,6 +4,7 @@ import type { PrismaInstance } from "./Mutation";
 
 export interface CreateUserArgs {
   name: string;
+  bio: string;
   email: string;
   password: string;
 }
@@ -18,11 +19,19 @@ export const authResolvers = {
     const password = await bcrypt.hash(args.password, 10);
 
     try {
-      const newUser = await prisma.user.create({
-        data: { name: args.name, email: args.email, password },
+      const userId = await prisma.$transaction(async (tx) => {
+        const newUser = await tx.user.create({
+          data: { name: args.name, email: args.email, password },
+        });
+
+        await tx.profile.create({
+          data: { userId: newUser.id, bio: args.bio },
+        });
+
+        return newUser.id as number;
       });
 
-      const token: string = generateToken(newUser.id);
+      const token: string = generateToken(userId);
       return { token };
     } catch (error: any) {
       if (

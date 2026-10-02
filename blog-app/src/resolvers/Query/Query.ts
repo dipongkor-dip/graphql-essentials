@@ -1,17 +1,15 @@
 import type { PrismaClient } from "../../../generated/prisma/client";
+import { authResolvers } from "./auth";
+import { postResolvers } from "./post";
+
+export interface PrismaInstance {
+  prisma: PrismaClient;
+  userInfo?: {
+    userId: number;
+  };
+}
 
 export const Query = {
-  user: async (p: any, args: any, { prisma }: { prisma: PrismaClient }) => {
-    console.log(p, args, { prisma });
-    const user = await prisma.user.findMany();
-    console.log(user);
-    return user;
-  },
-  users: async (p: any, args: any, { prisma }: { prisma: PrismaClient }) => {
-    return await prisma.user.findMany();
-  },
-  posts: async (p: any, args: any, { prisma }: { prisma: PrismaClient }) => {
-    const posts = await prisma.post.findMany();
-    return posts;
-  },
+  ...authResolvers,
+  ...postResolvers
 };

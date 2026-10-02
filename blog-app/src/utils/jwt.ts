@@ -5,11 +5,9 @@ export const generateToken = (userId: number) => {
   return jwt.sign({ userId }, config.jwtSecret, { expiresIn: "1d" });
 };
 
-export const verifyToken = (token: string) => {
+export const verifyToken = (token: string): { userId: number } | null => {
   try {
-    const decoded = jwt.verify(token, config.jwtSecret) as {
-      userId: number;
-    };
+    const decoded = jwt.verify(token, config.jwtSecret) as { userId: number };
     return decoded;
   } catch (error) {
     console.log("❌ Unauthorized User");
