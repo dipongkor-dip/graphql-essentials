@@ -1,4 +1,5 @@
 import type { PrismaClient } from "../../generated/prisma/client";
+import { userLoader } from "../dataLoaders/userLoader";
 
 export interface PrismaInstance {
   prisma: PrismaClient;
@@ -9,6 +10,9 @@ export interface PrismaInstance {
 
 export const Post = {
   author: async (p: { authorId: number }, args: any, c: PrismaInstance) => {
-    return await c.prisma.user.findUnique({ where: { id: p.authorId } });
+    console.log("author", p.authorId);
+    // return await c.prisma.user.findUnique({ where: { id: p.authorId } });
+
+    return userLoader.load(p.authorId);
   },
 };

@@ -11,7 +11,7 @@ import { verifyToken } from "./utils/jwt";
 
 const adapter = new PrismaPg({ connectionString: config.databaseUrl });
 
-const prisma = new PrismaClient({ adapter });
+export const prisma = new PrismaClient({ adapter });
 
 interface Context {
   prisma: PrismaClient<never, GlobalOmitConfig | undefined, DefaultArgs>;
