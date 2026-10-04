@@ -9,11 +9,19 @@ export const postResolvers = {
     });
     return posts;
   },
-  post: async (p: any, { id }: { id: string }, { prisma }: PrismaInstance) => {
-    console.log("post", id);
+  post: async (
+    p: any,
+    { id }: { id: string },
+    { prisma, userInfo }: PrismaInstance,
+  ) => {
     const post = await prisma.post.findUnique({
       where: { id: Number(id) },
     });
+
+    if (!post || (!post.published && post.authorId !== userInfo?.userId)) {
+      return null;
+    }
+
     return post;
   },
 };

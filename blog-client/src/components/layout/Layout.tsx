@@ -1,12 +1,15 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import Navbar from "../Navbar";
 
 
 const Layout = () => {
+  const { pathname } = useLocation();
+  const isDashboard = pathname.startsWith("/dashboard");
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <main className="flex-1 max-w-6xl mx-auto">
+      <main className={`w-full flex-1 ${isDashboard ? "" : "mx-auto max-w-6xl"}`}>
         <Outlet />
       </main>
     </div>

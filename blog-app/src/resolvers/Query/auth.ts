@@ -17,6 +17,17 @@ export const authResolvers = {
     return profile;
   },
 
+  myPosts: async (p: any, args: any, { prisma, userInfo }: PrismaInstance) => {
+    if (!userInfo || !userInfo.userId) {
+      return [];
+    }
+
+    return await prisma.post.findMany({
+      where: { authorId: userInfo.userId },
+      orderBy: { createdAt: "desc" },
+    });
+  },
+
   users: async (p: any, args: any, { prisma, userInfo }: PrismaInstance) => {
     if (!userInfo || !userInfo.userId) {
       return { userError: "❌ Unauthorized User" };
